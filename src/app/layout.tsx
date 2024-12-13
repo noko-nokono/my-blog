@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans relative max-w-screen-sm mx-auto pt-20 scroll-px-10">
+      <body className="font-zenmaru relative max-w-screen-sm min-h-svh mx-auto pt-20 scroll-px-10">
         {children}
         <ul className="absolute left-2/4 bottom-20 -translate-x-1/2 w-80 flex justify-center items-center gap-8 px-4 py-2 border border-solid border-slate-200 rounded-full">
           <li>知る</li>
