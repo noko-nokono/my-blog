@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div>
       <main>
-        <p>hogehoge</p>
+        <p>こんにちわ！初めまして。</p>
       </main>
     </div>
   );

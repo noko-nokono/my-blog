@@ -13,6 +13,9 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      zenmaru: ["Zen Maru Gothic", "serif"],
+    },
   },
   plugins: [],
 } satisfies Config;
