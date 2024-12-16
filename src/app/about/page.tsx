@@ -4,7 +4,7 @@ import { Divider } from '@/components/Divider';
 const About = () => {
   return (
     <main>
-      <div className='w-full flex flex-col justify-center items-center'>
+      <div className='w-full max-w-screen-sm mx-auto flex flex-col justify-center items-center'>
         <p>
           <Image
             src="/profile.png"
