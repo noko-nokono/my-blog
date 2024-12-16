@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-zenmaru relative text-zinc-500 max-w-screen-sm min-h-svh mx-auto py-20 scroll-px-10">
+      <body className="font-zenmaru relative text-zinc-500 min-h-svh mx-auto pt-20 pb-40 scroll-px-10">
         {children}
         <GlobalNavigation />
       </body>
