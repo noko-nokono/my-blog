@@ -15,7 +15,7 @@ const Read = () => {
   return (
     <main>
       <div className="w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
-        <h2 className="text-3xl">記事</h2>
+        <h2 className="text-3xl">書いたもの</h2>
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           {MOCK_DATA.map((data) => (
             <Card
