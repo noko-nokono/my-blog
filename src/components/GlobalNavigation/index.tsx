@@ -18,7 +18,10 @@ export const GlobalNavigation = () => {
     <nav>
       <ul className="fixed left-2/4 bottom-20 -translate-x-1/2 w-80 flex justify-center items-center gap-6 px-4 py-2 bg-white border border-solid border-slate-200 rounded-full">
         {list.map((item) => (
-          <li className={`${item.isSelected && selectedStyle} ease-in duration-200 hover:text-white hover:bg-blue-200 rounded-md`}>
+          <li
+            key={item.title}
+            className={`${item.isSelected && selectedStyle} ease-in duration-200 hover:text-white hover:bg-blue-200 rounded-md`}
+          >
             <Link
               href={item.link}
               className="px-2"
