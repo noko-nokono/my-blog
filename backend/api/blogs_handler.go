@@ -4,16 +4,17 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/noko-nokono/my-blog/backend/database"
 	"google.golang.org/api/iterator"
 )
 
 type Blog struct {
-	ID        string `json:"id"`
-	Title     string `json:"title"`
-	Content   string `json:"content"`
-	CreatedAt string `json:"created_at"`
+	ID        string    `json:"id"`
+	Title     string    `json:"title"`
+	Content   string    `json:"content"`
+	CreatedAt time.Time `firestore:"created_at" json:"created_at"`
 }
 
 func GetBlogsHandler() ([]Blog, error) {
