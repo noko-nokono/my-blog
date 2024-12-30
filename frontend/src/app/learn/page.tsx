@@ -1,11 +1,11 @@
 import { Section } from "@/components/Section";
 import { Divider } from "@/components/Divider";
 import { List } from "@/components/List";
-import type { Zenn } from "@/types/zenn";
+import { zennApi } from "@/apis/zenn/api";
 
 const Learn = async () => {
-  const zenn = await fetch('https://zenn.dev/api/articles?username=noko_noko&order=latest')
-    .then((res) => res.json()) as Zenn;
+  const { getZennArticles } = zennApi();
+  const zenn = await getZennArticles();
 
   return (
     <main>
@@ -16,6 +16,7 @@ const Learn = async () => {
           <ul>
             {zenn.articles.map((article) => (
               <List
+                key={article.id}
                 title={article.title}
                 date={article.published_at}
                 path={`https://zenn.dev/${article.path}`}

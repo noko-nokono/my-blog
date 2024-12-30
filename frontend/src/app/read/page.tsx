@@ -1,4 +1,5 @@
 import { Card } from "@/components/Card";
+import { blogApi } from "@/apis/blog/api";
 
 const MOCK_DATA = [
   { id: 1, title: "タイトル", description: "こんにちわん！お久しぶりですねー。昨日はこんなことがあったよん。みんなはどうだったかな？", date: "2024/12/15" },
@@ -11,7 +12,11 @@ const MOCK_DATA = [
   { id: 8, title: "仮のタイトルを付けてます", description: "今日の夕飯は何かな？お味噌汁あるかな？", date: "2024/12/15" },
 ];
 
-const Read = () => {
+const Read = async () => {
+  const { getBlogArticles } = blogApi();
+  const blogs = await getBlogArticles();
+  console.log('blogs', blogs);
+
   return (
     <main>
       <div className="w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
