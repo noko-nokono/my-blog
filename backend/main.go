@@ -11,10 +11,13 @@ func main() {
 
 	database.FireStoreInit()
 
+	route := r.Group("/api")
+	{
+		route.GET("/blog", api.HandleAPI(api.GetBlogsHandler))
+		// 特定のブログ記事を返すエンドポイント
+		route.GET("/blog/:id", api.HandleParamsAPI(api.GetBlogByIDHandler))
+	}
 	// ブログ記事一覧を返すエンドポイント
-	r.GET("/blog", api.HandleAPI(api.GetBlogsHandler))
-	// 特定のブログ記事を返すエンドポイント
-	r.GET("/blog/:id", api.HandleParamsAPI(api.GetBlogByIDHandler))
 
 	r.Run(":8080")
 }
