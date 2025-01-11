@@ -14,9 +14,12 @@ import (
 var App *firebase.App
 
 func FireStoreInit() error {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("環境変数ファイルの読み込みに失敗しました: %v", err)
+	env := os.Getenv("APP_ENV")
+	if env == "" {
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatalf("環境変数ファイルの読み込みに失敗しました: %v", err)
+		}
 	}
 
 	privateKey := os.Getenv("FIREBASE_PRIVATE_KEY")

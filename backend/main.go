@@ -13,11 +13,11 @@ func main() {
 
 	route := r.Group("/api")
 	{
-		route.GET("/blog", api.HandleAPI(api.GetBlogsHandler))
 		// 特定のブログ記事を返すエンドポイント
+		route.GET("/blog", api.HandleAPI(api.GetBlogsHandler))
+		// ブログ記事一覧を返すエンドポイント
 		route.GET("/blog/:id", api.HandleParamsAPI(api.GetBlogByIDHandler))
 	}
-	// ブログ記事一覧を返すエンドポイント
 
 	r.Run(":8080")
 }
