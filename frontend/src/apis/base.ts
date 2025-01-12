@@ -19,5 +19,7 @@ export const customFetch = (path: Path, method: Method, options: Options) => {
 };
 
 const withApiOrigin = (path: string) => {
-  return `${process.env.API_ORIGIN ?? 'http://localhost:8080'}${path}`;
+  return process.env.API_ORIGIN
+    ? `${process.env.API_ORIGIN}/${path}`
+    : `http://localhost:8080${path}`;
 };
