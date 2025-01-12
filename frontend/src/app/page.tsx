@@ -1,8 +1,8 @@
 const Home = () => {
   return (
-    <div>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <main>
-        <p>こんにちわ！初めまして。</p>
+        <p>まだ準備中です...</p>
       </main>
     </div>
   );
