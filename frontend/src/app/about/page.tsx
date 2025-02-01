@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import { Section } from '@/components/Section';
 import { Divider } from '@/components/Divider';
+import { Label } from '@/components/Label';
+
+const canDoList = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Next.js', 'Recoil', 'Jotai', 'Chakra', 'SCSS', 'Tanstack Query', 'Jest', 'React Testing Library', 'Zod'];
+const somewhatCanDoList = ['Redux', 'MobX', 'Mantine', 'MUI', 'Styled Component', 'Tailwind', 'SWR', 'Storybook'];
+const barelyCanDoList = ['Mock Service Worker', 'React Hook Form', 'reCAPTCHA'];
 
 const About = () => {
   return (
@@ -21,21 +26,20 @@ const About = () => {
         </div>
         <Divider />
         <Section title='自己紹介'>
-          <p>つちのこという名前で活動している者です。</p>
-          <p className='text-center my-4'>仕事</p>
-          <p>Webサービスの開発でFrontend領域を担当しているエンジニアです。</p>
-          <p>日々忙しなく働いております。</p>
-          <p>バックエンド開発も少しだけやっていて、最低限のことならできると思います。</p>
-          <p>ゲーム開発やピクセルアートは趣味でやっています。</p>
-          <p>なので、仕事ではないです。</p>
+          <p>つちのこという名前で活動しております。</p>
+          <p className='text-center my-5'>仕事</p>
+          <p>Webサービスの開発でフロントエンド領域を担当しているエンジニアです。</p>
+          <p>バックエンドやインフラの開発も業務で経験があり、最低限の開発なら問題なく実装することができます。</p>
+          <p>最近は、技術カンファレンスの登壇や、OSSのメンテナーなどもさせていただいており、開発に関することを幅広くやらせていただいております。</p>
+          <p>ゲーム開発やピクセルアートは趣味でやっているため、そこまで複雑なことはできません。</p>
           <p>技術的なことは「できること」で詳しく紹介させていただきます。</p>
-          <p className='text-center my-4'>暮らし</p>
-          <p>東京でなんとか頑張っています。</p>
-          <p>リクガメと日々を過ごしており、アイコンとして使用している子になります。</p>
-          <p>好きな食べ物は、りんごとにんじんです。</p>
-          <p>幼い頃、肺炎に罹って大変な思いをしました。</p>
-          <p>長い闘病の末、今は（おそらく）楽しく過ごしている子です。</p>
-          <p className='text-center my-4'>目標</p>
+          <p className='text-center my-5'>経歴</p>
+          <p>大学では、日本史についての研究を行なっておりました。</p>
+          <p>大学1年生からWebサイトの制作会社でアルバイトを行なっており、大学3年生までたくさん学ばせていただきました。</p>
+          <p>大学4年の夏から現在所属している会社の内定者として半年間アルバイトさせていただき、エンジニアとしてのキャリをスタートさせました。</p>
+          <p>会社に入社してからは、ゲーム配信サービスや新規のエンタメサービスの開発などを2年半ほどさせていただきました。</p>
+          <p>現在は、広告系のサービスの開発を行なっており、日々忙しく働いております。</p>
+          <p className='text-center my-5'>目標</p>
           <p>現在作成しているゲームをリリースしたいです。</p>
           <p>ここまでに作り切るという期限が迫っており、日々頭を悩ましています。</p>
           <p>期限に間に合うかは別として「遊ぶ」ページにゲームが載っていれば達成です。</p>
@@ -44,28 +48,40 @@ const About = () => {
         <Divider />
         <Section title='好きなこと'>
           <p>好きなことは広く浅く、たくさんあると思います。</p>
-          <p className='text-center my-4'>1. 読書（小説）</p>
+          <p className='text-center my-5'>1. 読書（小説）</p>
           <p>大人になってから割と読むようになりました。</p>
           <p>なので、読んでいる冊数だとそこまで多くないですが、最近だと月に2,3冊くらいのペースで読んでいる感じです。</p>
           <p>青山美智子さんや瀬尾まいこさんなど、日常生活がベースになっている作品をよく読んでいて、登場人物の感情がポジティブな方に揺れるところが好きです。</p>
-          <p className='text-center my-4'>2. お笑い芸人</p>
+          <p className='text-center my-5'>2. お笑い芸人</p>
           <p>みんな見ている有名なバラエティ番組は毎週楽しく見ています。</p>
           <p>好きになったキッカケは、霜降り明星さんで、今もバラエティやYouTube、ラジオなど色々見て笑っています。</p>
           <p>M-1グランプリは毎年の楽しみで、クリスマスやお正月よりも楽しみな日です。</p>
-          <p className='text-center my-4'>3. APEX LEGENDS</p>
+          <p className='text-center my-5'>3. APEX LEGENDS</p>
           <p>初めてのFPSゲームで、シーズン8くらいからやっています。</p>
           <p>自分でするのも好きですが、競技のAPEXが特に好きで、日韓の予選から世界大会はもちろん、毎日スクリム配信まで視聴しています。</p>
           <p>自分でプレイする時は、バンガロールかコンジットを使うことが多くて、ショットガンが苦手です。</p>
         </Section>
         <Divider />
         <Section title='できること'>
-          <p>主にエンジニアとしての技術的なところで書こうかなと思います。</p>
-          <p className='text-center my-4'>1. できる</p>
-          <p>HTML, CSS, JavaScript, React, TypeScript, Next.js</p>
-          <p></p>
-          <p className='text-center my-4'>2. ちょっとできる</p>
-          <p></p>
-          <p className='text-center my-4'>3. ほんの少しできる</p>
+          <p>主にフロントエンジニアの技術的なところで書こうかなと思います。</p>
+          <p className='text-center my-5'>1. できる</p>
+          <ul className='flex gap-2 flex-wrap justify-center'>
+            { canDoList.map((item) => (
+              <Label key={item} title={item} />
+            ))}
+          </ul>
+          <p className='text-center my-5'>2. ちょっとできる</p>
+          <ul className='flex gap-2 flex-wrap justify-center'>
+            { somewhatCanDoList.map((item) => (
+              <Label key={item} title={item} />
+            ))}
+          </ul>
+          <p className='text-center my-5'>3. ほんの少しできる</p>
+          <ul className='flex gap-2 flex-wrap justify-center'>
+            { barelyCanDoList.map((item) => (
+              <Label key={item} title={item} />
+            ))}
+          </ul>
         </Section>
         <Divider />
         <Section title='連絡'>
