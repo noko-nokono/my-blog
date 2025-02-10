@@ -3,9 +3,9 @@ import { Section } from '@/components/Section';
 import { Divider } from '@/components/Divider';
 import { Label } from '@/components/Label';
 
-const canDoList = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Next.js', 'Recoil', 'Jotai', 'Chakra', 'SCSS', 'Tanstack Query', 'Jest', 'React Testing Library', 'Zod'];
-const somewhatCanDoList = ['Redux', 'MobX', 'Mantine', 'MUI', 'Styled Component', 'Tailwind', 'SWR', 'Storybook'];
-const barelyCanDoList = ['Mock Service Worker', 'React Hook Form', 'reCAPTCHA'];
+const canDoList = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Next.js', 'Recoil', 'Jotai', 'Chakra', 'Yamada', 'SCSS', 'Tanstack Query', 'Jest', 'React Testing Library', 'Zod'];
+const somewhatCanDoList = ['React Router', 'Redux', 'MobX', 'Mantine', 'MUI', 'Styled Component', 'Tailwind', 'SWR', 'Storybook', 'Mock Service Worker', 'React Hook Form', 'reCAPTCHA'];
+const otherList = ['Go', 'Node.js', 'gRPC', 'GCP', 'Firebase', 'Docker', 'GitHub Actions', 'Vercel'];
 
 const About = () => {
   return (
@@ -51,7 +51,7 @@ const About = () => {
           <p className='text-center my-5'>1. 読書（小説）</p>
           <p>大人になってから割と読むようになりました。</p>
           <p>なので、読んでいる冊数だとそこまで多くないですが、最近だと月に2,3冊くらいのペースで読んでいる感じです。</p>
-          <p>青山美智子さんや瀬尾まいこさんなど、日常生活がベースになっている作品をよく読んでいて、登場人物の感情がポジティブな方に揺れるところが好きです。</p>
+          <p>青山美智子さんや瀬尾まいこさんなど、日常生活がベースになっている作品をよく読んでいて、登場人物の心情がポジティブに変化するところが好きです。</p>
           <p className='text-center my-5'>2. お笑い芸人</p>
           <p>みんな見ている有名なバラエティ番組は毎週楽しく見ています。</p>
           <p>好きになったキッカケは、霜降り明星さんで、今もバラエティやYouTube、ラジオなど色々見て笑っています。</p>
@@ -76,9 +76,9 @@ const About = () => {
               <Label key={item} title={item} />
             ))}
           </ul>
-          <p className='text-center my-5'>3. ほんの少しできる</p>
+          <p className='text-center my-5'>3. その他</p>
           <ul className='flex gap-2 flex-wrap justify-center'>
-            { barelyCanDoList.map((item) => (
+            { otherList.map((item) => (
               <Label key={item} title={item} />
             ))}
           </ul>
