@@ -3,6 +3,13 @@ import { Section } from "@/components/Section";
 import { Divider } from "@/components/Divider";
 import { List } from "@/components/List";
 import { zennApi } from "@/apis/zenn/api";
+import type { Metadata } from "next";
+
+const description = "つちのこの執筆した記事や登壇資料が見れるページです。"
+export const metadata: Metadata = {
+  title: "学ぶ",
+  description,
+};
 
 const Learn = async () => {
   const { getZennArticles } = zennApi();

@@ -1,6 +1,13 @@
 import { Container } from '@/components/Container';
 import { Section } from "@/components/Section";
 import { Divider } from "@/components/Divider";
+import type { Metadata } from "next";
+
+const description = "つちのこの作成したゲームが見れるページです。"
+export const metadata: Metadata = {
+  title: "遊ぶ",
+  description,
+};
 
 const Game = () => {
   return (
