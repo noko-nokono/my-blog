@@ -3,6 +3,13 @@ import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 import { Divider } from '@/components/Divider';
 import { Label } from '@/components/Label';
+import type { Metadata } from "next";
+
+const description = "つちのこの経歴やどんな人間なのか知ることができるページです。"
+export const metadata: Metadata = {
+  title: "知る",
+  description,
+};
 
 const canDoList = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Next.js', 'Recoil', 'Jotai', 'Chakra', 'Yamada', 'SCSS', 'Tanstack Query', 'Jest', 'React Testing Library', 'Zod'];
 const somewhatCanDoList = ['React Router', 'Redux', 'MobX', 'Mantine', 'MUI', 'Styled Component', 'Tailwind', 'SWR', 'Storybook', 'Mock Service Worker', 'React Hook Form', 'reCAPTCHA'];

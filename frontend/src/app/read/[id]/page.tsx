@@ -1,12 +1,13 @@
 import React from "react";
 import { Container } from "@/components/Container";
 import { blogIdApi } from "@/apis/blog/api";
+import type { Metadata } from 'next'
 
-type Params = {
+type Props = {
   params: Promise<{ id: string }>;
 }
 
-const ReadId = async ({params}: Params) => {
+const ReadId = async ({params}: Props) => {
   const id = (await params).id;
 
   const { getBlogIdArticle } = blogIdApi(id);
@@ -27,3 +28,16 @@ const ReadId = async ({params}: Params) => {
 };
 
 export default ReadId;
+
+export async function generateMetadata(
+  { params }: Props,
+): Promise<Metadata> {
+  const id = (await params).id
+  const { getBlogIdArticle } = blogIdApi(id);
+  const blogDetail = await getBlogIdArticle();
+ 
+  return {
+    title: blogDetail.title,
+    description: blogDetail.content,
+  }
+}
