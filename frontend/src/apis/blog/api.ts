@@ -1,4 +1,4 @@
-import type { Blog } from "@/types/blog";
+import type { Firebase, Blog } from "@/types/blog";
 import { customFetch } from "@/apis/base";
 
 type BlogApi = {
@@ -7,7 +7,8 @@ type BlogApi = {
 
 export const blogApi = (): BlogApi => {
   const getBlogArticles = async () => {
-    return customFetch('/api/blog', 'GET', {}).then((res) => res.json()) as Promise<Blog[]>;
+    const res = customFetch('/api/blog', 'GET', {}).then((res) => res.json()) as Promise<Firebase<Blog[]>>;
+    return res.then((data) => data.data);
   };
 
   return {
