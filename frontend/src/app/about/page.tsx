@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 import { Divider } from '@/components/Divider';
 import { Label } from '@/components/Label';
@@ -10,7 +11,7 @@ const otherList = ['Go', 'Node.js', 'gRPC', 'GCP', 'Firebase', 'Docker', 'GitHub
 const About = () => {
   return (
     <main>
-      <div className='w-full max-w-screen-sm mx-auto flex flex-col justify-center items-center'>
+      <Container>
         <p>
           <Image
             src="/profile.png"
@@ -93,7 +94,7 @@ const About = () => {
           <p className='my-4'>メール返信などはできないことが多いです。</p>
           <p>SNSも得意ではなく、あまりポストしたりできないです。</p>
         </Section>
-      </div>
+      </Container>
     </main>
   );
 }
