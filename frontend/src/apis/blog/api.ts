@@ -15,3 +15,14 @@ export const blogApi = (): BlogApi => {
     getBlogArticles,
   }
 };
+
+export const blogIdApi = (id: string) => {
+  const getBlogIdArticle = async () => {
+    const res = customFetch(`/api/blog/${id}`, 'GET', {}).then((res) => res.json()) as Promise<Firebase<Blog>>;
+    return res.then((data) => data.data);
+  }
+
+  return {
+    getBlogIdArticle,
+  }
+}

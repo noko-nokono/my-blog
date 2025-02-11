@@ -1,3 +1,4 @@
+import { Container } from '@/components/Container';
 import { Section } from "@/components/Section";
 import { Divider } from "@/components/Divider";
 import { List } from "@/components/List";
@@ -9,7 +10,7 @@ const Learn = async () => {
 
   return (
     <main>
-      <div className='w-full max-w-screen-sm mx-auto flex flex-col justify-center items-center'>
+      <Container>
         <h2 className="text-3xl">学んだもの</h2>
         <Divider />
         <Section title="技術記事">
@@ -33,7 +34,7 @@ const Learn = async () => {
             data-ratio="1.7777777777777777"
           ></iframe>
         </Section>
-      </div>
+      </Container>
     </main>
   );
 }
