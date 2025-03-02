@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 const Read = async () => {
   const { getBlogArticles } = blogApi();
   const blogs = await getBlogArticles();
-  console.log('blogs', blogs);
 
   return (
     <main>
