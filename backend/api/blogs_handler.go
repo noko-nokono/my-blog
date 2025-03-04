@@ -27,7 +27,7 @@ func GetBlogsHandler() ([]Blog, error) {
 	}
 	defer client.Close()
 
-	iter := client.Collection("blogs").OrderBy("created_at", firestore.Asc).Documents(context.Background())
+	iter := client.Collection("blogs").OrderBy("created_at", firestore.Desc).Documents(context.Background())
 	defer iter.Stop()
 
 	for {
