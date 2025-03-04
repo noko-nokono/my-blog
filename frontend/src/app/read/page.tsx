@@ -1,5 +1,5 @@
 import { Card } from "@/components/Card";
-import { blogApi } from "@/apis/blog/api";
+import { getBlogArticles } from "@/apis/blog/api";
 import type { Metadata } from "next";
 
 const description = "つちのこの私生活について書いたブログの一覧が見れるページです。"
@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 const Read = async () => {
-  const { getBlogArticles } = blogApi();
   const blogs = await getBlogArticles();
 
   return (
