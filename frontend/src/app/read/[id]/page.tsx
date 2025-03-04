@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@/components/Container";
-import { blogApi, blogIdApi } from "@/apis/blog/api";
+import { getBlogArticles, getBlogIdArticle } from "@/apis/blog/api";
 import type { Metadata } from 'next'
 
 type Props = {
@@ -10,8 +10,7 @@ type Props = {
 const ReadId = async ({params}: Props) => {
   const id = (await params).id;
 
-  const { getBlogIdArticle } = blogIdApi(id);
-  const blogDetail = await getBlogIdArticle();
+  const blogDetail = await getBlogIdArticle(id);
 
   // スペースが二つ続いた場合に改行を行う処理
   const content = blogDetail.content.replaceAll(" ", "\n");
@@ -30,7 +29,6 @@ const ReadId = async ({params}: Props) => {
 export default ReadId;
 
 export async function generateStaticParams() {
-  const { getBlogArticles } = blogApi();
   const blogs = await getBlogArticles();
   return blogs.map((blog) => ({ params: { id: blog.id } }));
 };
@@ -39,8 +37,7 @@ export async function generateMetadata(
   { params }: Props,
 ): Promise<Metadata> {
   const id = (await params).id
-  const { getBlogIdArticle } = blogIdApi(id);
-  const blogDetail = await getBlogIdArticle();
+  const blogDetail = await getBlogIdArticle(id);
  
   return {
     title: blogDetail.title,
