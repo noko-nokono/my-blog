@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@/components/Container";
-import { blogIdApi } from "@/apis/blog/api";
+import { blogApi, blogIdApi } from "@/apis/blog/api";
 import type { Metadata } from 'next'
 
 type Props = {
@@ -28,6 +28,12 @@ const ReadId = async ({params}: Props) => {
 };
 
 export default ReadId;
+
+export async function generateStaticParams() {
+  const { getBlogArticles } = blogApi();
+  const blogs = await getBlogArticles();
+  return blogs.map((blog) => ({ params: { id: blog.id } }));
+};
 
 export async function generateMetadata(
   { params }: Props,

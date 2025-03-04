@@ -7,7 +7,8 @@ type BlogApi = {
 
 export const blogApi = (): BlogApi => {
   const getBlogArticles = async () => {
-    const res = customFetch('/api/blog', 'GET', {}).then((res) => res.json()) as Promise<Firebase<Blog[]>>;
+    const res = customFetch('/api/blog', 'GET', { cache: 3600 })
+      .then((res) => res.json()) as Promise<Firebase<Blog[]>>;
     return res.then((data) => data.data);
   };
 
@@ -18,7 +19,8 @@ export const blogApi = (): BlogApi => {
 
 export const blogIdApi = (id: string) => {
   const getBlogIdArticle = async () => {
-    const res = customFetch(`/api/blog/${id}`, 'GET', {}).then((res) => res.json()) as Promise<Firebase<Blog>>;
+    const res = customFetch(`/api/blog/${id}`, 'GET', {})
+      .then((res) => res.json()) as Promise<Firebase<Blog>>;
     return res.then((data) => data.data);
   }
 
