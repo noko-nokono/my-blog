@@ -6,6 +6,7 @@ import (
 	"log"
 	"time"
 
+	"cloud.google.com/go/firestore"
 	"github.com/noko-nokono/my-blog/backend/database"
 	"google.golang.org/api/iterator"
 )
@@ -26,7 +27,7 @@ func GetBlogsHandler() ([]Blog, error) {
 	}
 	defer client.Close()
 
-	iter := client.Collection("blogs").Documents(context.Background())
+	iter := client.Collection("blogs").OrderBy("created_at", firestore.Asc).Documents(context.Background())
 	defer iter.Stop()
 
 	for {
