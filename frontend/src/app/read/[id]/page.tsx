@@ -40,8 +40,8 @@ const ReadId = async ({params}: Props) => {
   return (
     <main>
       <Container>
-        <h1 className="text-2xl">{ blogDetail.title }</h1>
-        <div className="mt-8">
+        <h1 className="text-2xl px-8">{ blogDetail.title }</h1>
+        <div className="mt-8 px-8">
           {...content}
         </div>
       </Container>

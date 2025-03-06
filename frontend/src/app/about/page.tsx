@@ -19,19 +19,19 @@ const About = () => {
   return (
     <main>
       <Container>
-        <p>
-          <Image
-            src="/profile.png"
-            alt=''
-            width={240}
-            height={240}
-            className='rounded-2xl'
-          />
-        </p>
-        <div className='flex flex-col gap-4 mt-6 text-center'>
+        <section className='flex flex-col items-center gap-4 px-8'>
+          <p>
+            <Image
+              src="/profile.png"
+              alt=''
+              width={240}
+              height={240}
+              className='rounded-2xl'
+            />
+          </p>
           <h1 className='text-3xl font-bold'>つちのこ</h1>
-          <p className='font-bold'>Frontend Developer / Game Creater / Pixel Art Creator</p>
-        </div>
+          <p className='font-bold'>Frontend Developer / Game Creater</p>
+        </section>
         <Divider />
         <Section title='自己紹介'>
           <p>つちのこという名前で活動しております。</p>
