@@ -7,9 +7,10 @@ export const GlobalNavigation = () => {
   const pathname = usePathname();
 
   const list = [
-    { title: "知る", link: "/about", isSelected: pathname === "/about" },
+    // { title: "知る", link: "/about", isSelected: pathname === "/about" },
     { title: "読む", link: "/read", isSelected: pathname === "/read" },
-    { title: "学び", link: "/learn", isSelected: pathname === "/learn" },
+    { title: "見る", link: "/look", isSelected: pathname === "/look" },
+    { title: "学ぶ", link: "/learn", isSelected: pathname === "/learn" },
     { title: "遊ぶ", link: "/game", isSelected: pathname === "/game" },
   ];
   const selectedStyle = "text-white bg-blue-200";
