@@ -33,7 +33,7 @@ const Home = () => {
           <p className='font-bold'>Frontend Developer / Game Creater</p>
         </section>
         <Divider />
-        <Section title='自己紹介'>
+        <Section title='自己紹介' isPadding>
           <p>つちのこという名前で活動しております。</p>
           <p className='text-center my-5'>仕事</p>
           <p>Webサービスの開発でフロントエンド領域を担当しているエンジニアです。</p>
@@ -54,7 +54,7 @@ const Home = () => {
           <p>あなたがこれを見ている頃には達成できているでしょうか？</p>
         </Section>
         <Divider />
-        <Section title='好きなこと'>
+        <Section title='好きなこと' isPadding>
           <p>好きなことは広く浅く、たくさんあると思います。</p>
           <p className='text-center my-5'>1. 読書（小説）</p>
           <p>大人になってから割と読むようになりました。</p>
@@ -70,7 +70,7 @@ const Home = () => {
           <p>自分でプレイする時は、バンガロールかコンジットを使うことが多くて、ショットガンが苦手です。</p>
         </Section>
         <Divider />
-        <Section title='できること'>
+        <Section title='できること' isPadding>
           <p>主にフロントエンジニアの技術的なところで書こうかなと思います。</p>
           <p className='text-center my-5'>1. できる</p>
           <ul className='flex gap-2 flex-wrap justify-center'>
@@ -92,7 +92,7 @@ const Home = () => {
           </ul>
         </Section>
         <Divider />
-        <Section title='連絡'>
+        <Section title='連絡' isPadding>
           <div className='flex gap-10 justify-center text-gray-400 font-bold'>
             <a className='w-16 text-center' href="mailto:tutinoko.nokonoko619@gmail.com">Email</a>
             <a className='w-16 text-center' href="https://x.com/noko_noko619">X</a>
