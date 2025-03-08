@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const Game = () => {
   return (
     <Content title='作ったもの'>
-      <Section title="ゲーム">
+      <Section title="ゲーム" isPadding>
           <p>まだ未発表です。</p>
       </Section>
     </Content>
