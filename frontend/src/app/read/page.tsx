@@ -1,4 +1,5 @@
 import { Card } from "@/components/Card";
+import { Content } from '@/components/Content';
 import { getBlogArticles } from "@/apis/blog/api";
 import type { Metadata } from "next";
 
@@ -12,22 +13,17 @@ const Read = async () => {
   const blogs = await getBlogArticles();
 
   return (
-    <main>
-      <div className="w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
-        <h2 className="text-3xl">書いたもの</h2>
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          {blogs.map((data) => (
-             <Card
-              key={data.id}
-              id={data.id.toString()}
-              title={data.title}
-              description={data.content}
-              createAt={data.created_at}
-            />
-          ))}
-        </div>
-      </div>
-    </main>
+    <Content title="書いたもの">
+      {blogs.map((data) => (
+        <Card
+          key={data.id}
+          id={data.id.toString()}
+          title={data.title}
+          description={data.content}
+          createAt={data.created_at}
+        />
+      ))}
+    </Content>
   );
 }
 export default Read;

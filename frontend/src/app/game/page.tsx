@@ -1,6 +1,5 @@
-import { Container } from '@/components/Container';
+import { Content } from '@/components/Content';
 import { Section } from "@/components/Section";
-import { Divider } from "@/components/Divider";
 import type { Metadata } from "next";
 
 const description = "つちのこの作成したゲームが見れるページです。"
@@ -11,15 +10,11 @@ export const metadata: Metadata = {
 
 const Game = () => {
   return (
-    <main>
-      <Container>
-        <h2 className="text-3xl">作ったもの</h2>
-        <Divider />
-        <Section title="ゲーム">
+    <Content title='作ったもの'>
+      <Section title="ゲーム">
           <p>まだ未発表です。</p>
-        </Section>
-      </Container>
-    </main>
+      </Section>
+    </Content>
   );
 }
 

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Container } from '@/components/Container';
-import { Section } from "@/components/Section";
-import { Divider } from "@/components/Divider";
+import { Content } from '@/components/Content';
 
 const description = "つちのこの撮った写真が見れるページです。"
 export const metadata: Metadata = {
@@ -11,15 +9,11 @@ export const metadata: Metadata = {
 
 const Look = () => {
   return (
-    <main>
-      <Container>
-        <h2 className="text-3xl">撮ったもの</h2>
-        <Divider />
-        <Section title="写真">
-          <p>まだありません。</p>
-        </Section>
-      </Container>
-    </main>
+    <Content title="撮ったもの">
+      <div className="px-8">
+        <p>まだありません。</p>
+      </div>
+    </Content>
   );
 }
 
