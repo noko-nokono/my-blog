@@ -13,12 +13,12 @@ export const List = (props: Props) => {
 
   return (
     <li>
-      <a href={path} target="_blank" className="w-72 h-56 flex flex-col justify-betweenbg-white border border-solid border-slate-200 rounded-md drop-shadow">
-        <div className="h-28 bg-[#CFE4FE] flex justify-center items-center">
+      <a href={path} target="_blank" className="w-[212px] h-56 flex flex-col justify-betweenbg-white border border-solid border-slate-200 rounded-md drop-shadow">
+        <div className="h-32 bg-[#CFE4FE] flex justify-center items-center">
           <span className="text-4xl">{ emoji }</span>
         </div>
-        <div className="h-28 flex flex-col justify-between p-4">
-          {title}
+        <div className="h-32 flex flex-col justify-between p-4">
+          <h4 className="text-sm">{title}</h4>
           <div className="flex items-center gap-1 text-xs">
             <time
               dateTime={date}
