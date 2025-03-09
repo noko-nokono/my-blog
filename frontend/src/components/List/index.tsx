@@ -13,7 +13,7 @@ export const List = (props: Props) => {
 
   return (
     <li>
-      <a href={path} target="_blank" className="w-[212px] h-56 flex flex-col justify-betweenbg-white border border-solid border-slate-200 rounded-md drop-shadow">
+      <a href={path} target="_blank" className="sm:w-[212px] h-56 w-72 flex flex-col justify-betweenbg-white border border-solid border-slate-200 rounded-md drop-shadow">
         <div className="h-32 bg-[#CFE4FE] flex justify-center items-center">
           <span className="text-4xl">{ emoji }</span>
         </div>
