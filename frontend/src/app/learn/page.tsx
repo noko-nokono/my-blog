@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 const Learn = async () => {
   const zenn = await getZennArticles();
-  console.log(zenn);
 
   return (
     <Content title='学んだもの'>
