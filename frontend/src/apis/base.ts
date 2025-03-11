@@ -1,6 +1,6 @@
 type Path = string;
 type Method = "GET" | "POST" | "PUT" | "DELETE";
-type NextCache = number | Extract<RequestCache, "no-store" | "no-cache">;
+type NextCache = number | Extract<RequestCache, "force-cache" | "no-cache">;
 // TODO: オプションデータの渡し方の修正と不足分の追加を行う
 type Options = {
   query?: Record<string, unknown>;

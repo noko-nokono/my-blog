@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const canDoList = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Next.js', 'Recoil', 'Jotai', 'Chakra', 'Yamada', 'SCSS', 'Tanstack Query', 'Jest', 'React Testing Library', 'Zod'];
 const somewhatCanDoList = ['React Router', 'Redux', 'MobX', 'Mantine', 'MUI', 'Styled Component', 'Tailwind', 'SWR', 'Storybook', 'Mock Service Worker', 'React Hook Form', 'reCAPTCHA'];
-const otherList = ['Go', 'Node.js', 'gRPC', 'GCP', 'Firebase', 'Docker', 'GitHub Actions', 'Vercel'];
+const otherList = ['Go', 'Node.js', 'gRPC', 'GCP', 'Git', 'GitHub', 'GitHub Actions', 'Firebase', 'Docker', 'Vercel', 'VSCode', 'Slack', 'Notion'];
 
 const Home = () => {
   return (
@@ -51,7 +51,7 @@ const Home = () => {
           <p>現在作成しているゲームをリリースしたいです。</p>
           <p>ここまでに作り切るという期限が迫っており、日々頭を悩ましています。</p>
           <p>期限に間に合うかは別として「遊ぶ」ページにゲームが載っていれば達成です。</p>
-          <p>あなたがこれを見ている頃には達成できているでしょうか？</p>
+          <p>あなたがこれを見ている頃には達成できているのでしょうか、、、</p>
         </Section>
         <Divider />
         <Section title='好きなこと' isPadding>
@@ -59,7 +59,7 @@ const Home = () => {
           <p className='text-center my-5'>1. 読書（小説）</p>
           <p>大人になってから割と読むようになりました。</p>
           <p>なので、読んでいる冊数だとそこまで多くないですが、最近だと月に2,3冊くらいのペースで読んでいる感じです。</p>
-          <p>青山美智子さんや瀬尾まいこさんなど、日常生活がベースになっている作品をよく読んでいて、登場人物の心情がポジティブに変化するところが好きです。</p>
+          <p>青山美智子さんや瀬尾まいこさんなど、日常生活がベースになっている作品をよく読んでいて、登場人物の心情がポジティブに変化するところが魅力だと感じています。</p>
           <p className='text-center my-5'>2. お笑い芸人</p>
           <p>みんな見ている有名なバラエティ番組は毎週楽しく見ています。</p>
           <p>好きになったキッカケは、霜降り明星さんで、今もバラエティやYouTube、ラジオなど色々見て笑っています。</p>

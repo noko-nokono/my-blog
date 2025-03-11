@@ -25,6 +25,7 @@ export const MediaCard = (props: Props) => {
           width={200}
           height={200}
           className='rounded-2xl'
+          priority
         />
       </p>
       <h2 className='text-xl'>{ title }</h2>

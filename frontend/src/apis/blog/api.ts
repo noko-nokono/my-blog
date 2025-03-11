@@ -8,7 +8,7 @@ export const getBlogArticles = async () => {
 };
 
 export const getBlogIdArticle = async (id: string) => {
-  const res = customFetch(`/api/blog/${id}`, 'GET', { cache: 3600 })
+  const res = customFetch(`/api/blog/${id}`, 'GET', { cache: 'force-cache' })
     .then((res) => res.json()) as Promise<Firebase<Blog>>;
   return res.then((data) => data.data);
 }
