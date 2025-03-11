@@ -25,6 +25,7 @@ export const WideCard = (props: Props) => {
           width={200}
           height={200}
           className='rounded-l-2xl'
+          priority
         />
       </p>
       <div className='w-96 h-[200px] border border-zinc-200 rounded-r-2xl'>
