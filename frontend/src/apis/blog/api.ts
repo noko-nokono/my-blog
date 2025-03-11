@@ -1,5 +1,3 @@
-'use server';
-
 import type { Firebase, Blog } from "@/types/blog";
 import { customFetch } from "@/apis/base";
 
@@ -10,7 +8,7 @@ export const getBlogArticles = async () => {
 };
 
 export const getBlogIdArticle = async (id: string) => {
-  const res = customFetch(`/api/blog/${id}`, 'GET', {})
+  const res = customFetch(`/api/blog/${id}`, 'GET', { cache: 3600 })
     .then((res) => res.json()) as Promise<Firebase<Blog>>;
   return res.then((data) => data.data);
 }
