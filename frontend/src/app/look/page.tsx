@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const photos = [
+  { url: '/zimoto.jpeg', title: `猫とお別れした日` },
   { url: '/shibuya.jpeg', title: '早朝の渋谷' },
 ];
 
