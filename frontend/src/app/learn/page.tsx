@@ -32,12 +32,20 @@ const Learn = async () => {
       </Section>
       <Divider />
       <Section title="登壇資料" isPadding>
-        <iframe
-          src="https://speakerdeck.com/player/384feb1071f345c99c9b34cf5d777a47"
-          title="TypeScriptでライブラリとの依存を限定的にする方法"
-          className="w-full aspect-video"
-          data-ratio="1.7777777777777777"
-        ></iframe>
+        <div className='flex flex-wrap justify-center gap-4'>
+          <iframe
+            src="https://speakerdeck.com/player/384feb1071f345c99c9b34cf5d777a47"
+            title="TypeScriptでライブラリとの依存を限定的にする方法"
+            className="w-96 aspect-video"
+            data-ratio="1.7777777777777777"
+          ></iframe>
+          <iframe
+            src="https://speakerdeck.com/player/bf7e8a46dd8043a3bfd30326a4f14724"
+            title="React version 19 追加機能をまとめる"
+            className="w-96 aspect-video"
+            data-ratio="1.7777777777777777"
+          ></iframe>
+        </div>
       </Section>
     </Content>
   );
