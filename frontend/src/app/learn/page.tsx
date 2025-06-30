@@ -34,14 +34,20 @@ const Learn = async () => {
       <Section title="登壇資料" isPadding>
         <div className='flex flex-wrap justify-center gap-4'>
           <iframe
-            src="https://speakerdeck.com/player/384feb1071f345c99c9b34cf5d777a47"
-            title="TypeScriptでライブラリとの依存を限定的にする方法"
+            src="https://speakerdeck.com/player/2b63821ae8a34e418ffbdfd58cc8679a"
+            title="フロントエンドエンジニアもGPTの裏側を理解したい"
             className="w-96 aspect-video"
             data-ratio="1.7777777777777777"
           ></iframe>
           <iframe
             src="https://speakerdeck.com/player/bf7e8a46dd8043a3bfd30326a4f14724"
             title="React version 19 追加機能をまとめる"
+            className="w-96 aspect-video"
+            data-ratio="1.7777777777777777"
+          ></iframe>
+          <iframe
+            src="https://speakerdeck.com/player/384feb1071f345c99c9b34cf5d777a47"
+            title="TypeScriptでライブラリとの依存を限定的にする方法"
             className="w-96 aspect-video"
             data-ratio="1.7777777777777777"
           ></iframe>
