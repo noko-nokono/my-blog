@@ -2,6 +2,7 @@ import { Content } from '@/components/Content';
 import { Section } from "@/components/Section";
 import { Divider } from "@/components/Divider";
 import { List } from "@/components/List";
+import { LinkCard } from '@/components/LinkCard';
 import { getZennArticles } from "@/apis/zenn/api";
 import type { Metadata } from "next";
 
@@ -58,6 +59,15 @@ const Learn = async () => {
             data-ratio="1.7777777777777777"
           ></iframe>
         </div>
+      </Section>
+      <Divider />
+      <Section title="各種記録" isPadding>
+        <LinkCard
+          title='しずかなインターネット'
+          href='https://sizu.me/tutinoko'
+          thumbnail='/sizu.webp'
+          className='w-4/5'
+        />
       </Section>
     </Content>
   );
